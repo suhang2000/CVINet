@@ -1,0 +1,21 @@
+# Stage-II (CVINet: train.py / test.py)
+# Versions below are the ones this code was developed and tested with
+# (Python 3.12, CUDA 12.4). Nearby versions are expected to work.
+torch==2.6.0
+torchvision==0.21.0
+timm==1.0.22
+numpy==2.3.3
+scipy==1.17.0
+pillow==12.0.0
+tqdm==4.67.1
+tensorboard==2.21.0
+
+# Stage-I (template generation: gen_image.py) — install separately, and only
+# if you want to regenerate the mental templates yourself. Stage-I was run in a
+# separate environment (PyTorch 2.8.0 / CUDA 12.8) with:
+#   torch==2.8.0
+#   diffusers==0.35.2
+#   transformers==4.57.1
+#   accelerate==1.11.0
+# The diffusers version matters: gen_image.py uses QwenImageEditPlusPipeline,
+# which is required to load Qwen-Image-Edit-2509.
